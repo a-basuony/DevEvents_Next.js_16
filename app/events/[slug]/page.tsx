@@ -78,7 +78,7 @@ const EventDetailsPage = async ({
 
   if (!description) notFound();
 
-  const similarEvents: IEvent[] = await getSimilarEventsBySlug(slug);
+  const similarEvents = await getSimilarEventsBySlug(slug);
 
   return (
     <section id="event">
