@@ -3,12 +3,18 @@
 import Image from "next/image";
 
 const ExploreBtn = () => {
+  const handleClick = () => {
+    const section = document.getElementById("events");
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" }); // smooth scroll
+    }
+  };
   return (
     <button
       className="mt-7 mx-auto "
       type="button"
       id="explore-btn"
-      onClick={() => console.log("click")}
+      onClick={handleClick}
     >
       <a href="#events">
         Explore Events

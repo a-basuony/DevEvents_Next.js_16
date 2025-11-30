@@ -23,7 +23,7 @@ const Page = async () => {
       <div className="mt-20 space-y-7">
         <h3>Featured Events</h3>
 
-        <ul className="events">
+        <ul className="events" id="events">
           {events &&
             events.length > 0 &&
             events.map((event: IEvent) => (
