@@ -1,7 +1,3 @@
-export const dynamic = "force-dynamic";
-
-// events/ahmed-mo-12/ => slug
-
 import { NextRequest, NextResponse } from "next/server";
 
 import connectDB from "@/lib/mongodb";
