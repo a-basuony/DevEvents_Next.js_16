@@ -1,10 +1,13 @@
+export const dynamic = "force-dynamic";
+
 import { IEvent } from "@/database";
 import ExploreBtn from "./../components/ExploreBtn";
 import EventCard from "@/components/EventCard";
 import { cacheLife } from "next/cache";
 
 const BASE_URL =
-  process.env.NEXT_PUBLIC_BASE_URL || "https://dev-events-one-nu.vercel.app";
+  process.env.NEXT_PUBLIC_BASE_URL ||
+  "https://dev-events-next-js-16-six.vercel.app/";
 
 const Page = async () => {
   // "use cache";
