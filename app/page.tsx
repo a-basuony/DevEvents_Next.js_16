@@ -4,7 +4,6 @@ import { IEvent } from "@/database";
 import ExploreBtn from "./../components/ExploreBtn";
 import EventCard from "@/components/EventCard";
 import { cacheLife } from "next/cache";
-import events from "@/lib/constants";
 
 const BASE_URL =
   process.env.NEXT_PUBLIC_BASE_URL ||
@@ -13,10 +12,10 @@ const BASE_URL =
 const Page = async () => {
   "use cache";
   cacheLife("hours");
-  // const response = await fetch(`${BASE_URL}/api/events`, {
-  //   cache: "no-store",
-  // });
-  // const { events } = await response.json();
+  const response = await fetch(`${BASE_URL}/api/events`, {
+    cache: "no-store",
+  });
+  const { events } = await response.json();
 
   console.log("BASE_URL:", BASE_URL);
 
